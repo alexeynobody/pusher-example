@@ -1,16 +1,17 @@
-# pusher_test
+# About
 
-A new Flutter project.
+Example app using Pusher
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Set key and cluster from Pusher in main.dart
 
-A few resources to get you started if this is your first Flutter project:
+```dart
+     await Pusher.init(
+        "Your App Key here",
+        PusherOptions(cluster: "eu"),
+        enableLogging: true,
+      );
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Send event 'test-event' to 'main' channel 
